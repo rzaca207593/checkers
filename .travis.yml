@@ -2,3 +2,5 @@ language: java
 jdk:
  - oraclejdk8
 script: mvn test -f ./proj.checkers/pom.xml
+before_script:
+  - export DISPLAY=:0.0
