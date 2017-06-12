@@ -10,11 +10,12 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20</version>
 				<configuration>
 					<excludes>
-						<exclude>**/proj.checkers.view/MainViewTest.java</exclude>
-						<exclude>**/proj.chekers.model/BoardTest.java</exclude>
+						<exclude>**/MainViewTest.java</exclude>
+						<exclude>**/BoardTest.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
