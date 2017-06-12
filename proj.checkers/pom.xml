@@ -5,6 +5,21 @@
 	<artifactId>proj.checkers</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<url>http://maven.apache.org</url>
+	<build>
+		<finalName>proj.checkers</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>**/proj.checkers.view/MainViewTest.java</exclude>
+						<exclude>**/proj.chekers.model/BoardTest.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<properties>
 		<spring.version>4.0.1.RELEASE</spring.version>
 		<!-- maven-compiler-plugin , aka JAVA Compiler 1.7 -->
@@ -27,9 +42,13 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>4.3.10.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.19</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
-	<build>
-		<finalName>proj.checkers</finalName>
-	</build>
+
 </project>
